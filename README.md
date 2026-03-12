@@ -1,6 +1,6 @@
 # Dream Catcher — Landing Page
 
-Static landing page for the Dream Catcher dream journal app, recreated from the original Webflow design at `dream-journal.webflow.io`.
+Static landing page for [Dream Catcher](https://dreamjournal.app).
 
 ## Structure
 
