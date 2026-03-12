@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<!-- Recreated from https://dream-journal.webflow.io/ -->
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Dream Catcher</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({ google: { families: ["Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"] } });</script>
+  <link href="images/610a5c75b74c1b61a4d0b4ab_dream-catcher-favicon.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="images/610a5c9f5ec41776b39861b4_dream-catcher-webclip.png" rel="apple-touch-icon"/>
+  <style>
+    /* =====================================================================
+       Reset / Normalize
+       ===================================================================== */
+    html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; }
+    article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block; }
+    audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
+    audio:not([controls]) { display: none; height: 0; }
+    [hidden], template { display: none; }
+    a { background-color: transparent; }
+    a:active, a:hover { outline: 0; }
+    b, strong { font-weight: bold; }
+    h1 { font-size: 2em; margin: .67em 0; }
+    img { border: 0; max-width: 100%; }
+    svg:not(:root) { overflow: hidden; }
+    figure { margin: 1em 40px; }
+
+    /* =====================================================================
+       Webflow grid helpers
+       ===================================================================== */
+    .w-container {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 940px;
+    }
+    .w-container:before, .w-container:after { content: " "; display: table; }
+    .w-container:after { clear: both; }
+    .w-row:before, .w-row:after { content: " "; display: table; }
+    .w-row:after { clear: both; }
+    .w-col {
+      position: relative;
+      float: left;
+      width: 100%;
+      min-height: 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .w-col-6 { width: 50%; }
+    .w-inline-block { display: inline-block; }
+    .w-inline-block:focus { outline: 0; }
+
+    /* =====================================================================
+       Custom site styles
+       ===================================================================== */
+    .section {
+      position: static;
+      display: block;
+      height: 800px;
+      padding: 0px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #080744;
+      background-image: url("images/610a51b30ee753c1fc855f61_stargazing_x3.png");
+      background-position: 50% 50%;
+      background-size: cover;
+      object-fit: fill;
+    }
+
+    .container {
+      display: block;
+      margin-top: 0px;
+      margin-right: auto;
+      margin-left: auto;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      align-self: flex-start;
+    }
+
+    .heading-2 {
+      font-family: Roboto, sans-serif;
+      color: #f2f2f2;
+      font-size: 70px;
+      line-height: 90px;
+    }
+
+    .heading-2.h1-on-dark {
+      display: block;
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .heading-3 {
+      color: #f2f2f2;
+      font-size: 28px;
+      line-height: 32px;
+    }
+
+    .heading-3.h3-on-dark {
+      text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .store-button {
+      position: static;
+      margin: 20px 0px 0px;
+      cursor: pointer;
+      vertical-align: middle;
+    }
+
+    .div-block .w-inline-block {
+      display: inline-flex;
+      align-items: center;
+      vertical-align: middle;
+    }
+
+    .div-block {
+      position: static;
+      margin-top: 220px;
+      align-self: flex-start;
+      flex: 0 auto;
+    }
+
+    .heading-6 {
+      color: #16181f;
+    }
+
+    .heading-6.h3-on-light {
+      font-size: 21px;
+      font-weight: 400;
+    }
+
+    .h1-on-light {
+      color: #16181f;
+    }
+
+    .columns-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .presentation-section-1 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .presentation-section-1.presentation-section-2 {
+      background-color: #d2daea;
+    }
+
+    .columns-3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .section-2 {
+      background-color: #d2daea;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .section-3 {
+      background-color: #d2daea;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .section-4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .h1-bottom {
+      margin-bottom: 0px;
+      font-family: Roboto, sans-serif;
+      color: #16181f;
+      font-size: 40px;
+      line-height: 60px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .h3-bottom {
+      margin-top: 0px;
+      font-family: Roboto, sans-serif;
+      color: #16181f;
+      font-weight: 500;
+    }
+
+    .image-4 {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .image-5 {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+    }
+
+    .link-block {
+      display: flex;
+      margin-right: auto;
+      margin-left: auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container-2 {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .h6-footer {
+      margin-top: 40px;
+      font-family: Roboto, sans-serif;
+      color: #f2f2f2;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .h6-footer.h6-f-email {
+      margin: 0px auto 40px;
+      letter-spacing: 0.4px;
+    }
+
+    .section-5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #16181f;
+    }
+
+    .link-block-2 {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .section-6 {
+      display: none;
+    }
+
+    .image-6 {
+      margin-top: 40px;
+    }
+
+    .image-7 {
+      margin-top: 40px;
+    }
+
+    .column-2 { }
+
+    /* =====================================================================
+       Responsive
+       ===================================================================== */
+    @media screen and (max-width: 991px) {
+      .section {
+        height: 400px;
+        background-image: url("images/60e8435f6484de5b5bbad026_stargazing_header.svg");
+        background-size: cover;
+      }
+      .heading-2 { font-size: 56px; line-height: 64px; }
+      .heading-3 { font-size: 24px; line-height: 28px; }
+      .store-button { margin-top: 0px; }
+      .div-block { margin-top: 100px; }
+    }
+
+    @media screen and (max-width: 767px) {
+      .section {
+        height: auto;
+        background-color: #080744;
+        background-image: url("images/60e8435f6484de5b5bbad026_stargazing_header.svg");
+        background-position: 0px 0px;
+        background-size: cover;
+      }
+      .heading-2 { font-size: 50px; line-height: 56px; }
+      .container { margin-top: 0px; margin-bottom: 18px; }
+      .heading-3 { font-size: 22px; line-height: 26px; }
+      .store-button { margin-top: 0px; }
+      .div-block { margin: 30px; }
+      .heading-6.h3-on-light { font-size: 16px; line-height: 20px; }
+      .h1-on-light { font-size: 22px; line-height: 24px; }
+      .h1-on-light.sync-text-1 { font-size: 22px; line-height: 24px; }
+      .column { padding-left: 20px; }
+      .column-2 { padding-right: 20px; }
+      .image-6 { margin-top: 20px; }
+      .image-7 { margin-top: 20px; }
+      .w-col { width: 100%; }
+      .w-col-6 { width: 100%; }
+      .columns-2, .columns-3 { flex-direction: column; }
+    }
+
+    @media screen and (max-width: 479px) {
+      .section { height: auto; background-position: 50% 50%; background-size: cover; }
+      .heading-2 { font-size: 32px; line-height: 38px; }
+      .container { margin-top: 0px; margin-bottom: 12px; }
+      .heading-3 { font-size: 18px; line-height: 24px; }
+      .div-block { margin: 30px; }
+      .heading-6.h3-on-light { font-family: Roboto, sans-serif; font-size: 14px; line-height: 18px; }
+      .h1-on-light { margin-top: 10px; font-family: Roboto, sans-serif; font-size: 18px; line-height: 20px; }
+      .h1-on-light.sync-text-1 { margin-top: 10px; font-family: Roboto, sans-serif; font-size: 18px; line-height: 20px; }
+      .columns-2 { margin-top: 10px; margin-bottom: 10px; }
+      .columns-3 { margin-top: 10px; margin-bottom: 10px; }
+      .h1-bottom { margin-right: 16px; margin-bottom: 10px; margin-left: 16px; font-size: 28px; line-height: 32px; }
+      .h3-bottom { margin-right: 45px; margin-left: 45px; font-size: 18px; line-height: 20px; text-align: center; }
+      .container-2 { margin-top: 20px; margin-bottom: 20px; }
+      .h6-footer { margin-top: 20px; margin-bottom: 0px; font-size: 14px; line-height: 18px; }
+      .h6-footer.h6-f-email { margin-bottom: 20px; }
+      .image-6 { margin-top: 10px; }
+      .image-7 { margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="section wf-section">
+    <div class="container w-container">
+      <div class="div-block">
+        <h1 class="heading-2 h1-on-dark">Dream Catcher</h1>
+        <h3 class="heading-3 h3-on-dark">The Ultimate Dream Journal<br/>&amp; Lucidity Tool</h3>
+        <a href="https://apps.apple.com/se/app/dream-catcher-lucid-journal/id6444252682?l=en" class="w-inline-block">
+          <img src="images/636e1eb4f2c48f759d61f199_Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" loading="lazy" width="180" alt="Download on the App Store" class="store-button"/>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.vojtkovszky.dreamcatcher&hl=en&gl=US" class="w-inline-block">
+          <img src="images/60e8461b71f40273fb101f52_google-play-badge.png" loading="lazy" width="226" alt="Get it on Google Play" class="store-button"/>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden section -->
+  <div class="section-6 wf-section"></div>
+
+  <!-- Feature 1: Dreams list -->
+  <div class="presentation-section-1 wf-section">
+    <div class="w-container">
+      <div class="columns-2 w-row">
+        <div class="column w-col w-col-6">
+          <h1 class="h1-on-light sync-text-1"><strong>Open the app and all your dreams are right there</strong></h1>
+          <h3 class="heading-6 h3-on-light">Quick scroll or search to find your previous logs.</h3>
+        </div>
+        <div class="w-col w-col-6">
+          <img src="images/610a5dd0cd7b972ec546273e_Dreams screen.png" loading="lazy" alt="" class="image-7"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 2: Edit (blue bg) -->
+  <div class="presentation-section-1 presentation-section-2 wf-section">
+    <div class="container-3 w-container">
+      <div class="columns-3 w-row">
+        <div class="w-col w-col-6">
+          <img src="images/610a5dd0fefd702d6f1fb301_Edit screen.png" loading="lazy" alt="" class="image-6"/>
+        </div>
+        <div class="column-2 w-col w-col-6">
+          <h1 class="h1-on-light"><strong>Easy way to add your dreams</strong></h1>
+          <h3 class="heading-6 h3-on-light">Simple and quick form allows you to focus on what's important and dark interface makes it comfortable to add your dreams in the middle of the night.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 3: Sync -->
+  <div class="wf-section">
+    <div class="w-container">
+      <div class="columns-2 w-row">
+        <div class="column w-col w-col-6">
+          <h1 class="h1-on-light sync-text-1">Sign in to sync and save all your data</h1>
+          <h3 class="heading-6 h3-on-light">Log in with Google to always keep your dreams safe and secure in the cloud. Log in to as many devices as you want and all your dreams will stay in sync.</h3>
+        </div>
+        <div class="w-col w-col-6">
+          <img src="images/610a5dd005d0f5b06d0e3e86_loggedin.png" loading="lazy" alt="" class="image-7"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 4: Patterns (blue bg) -->
+  <div class="section-2 wf-section">
+    <div class="container-3 w-container">
+      <div class="columns-3 w-row">
+        <div class="w-col w-col-6">
+          <img src="images/610a5dd1b7cb3b460652430b_Patterns.png" loading="lazy" alt="" class="image-6"/>
+        </div>
+        <div class="column-2 w-col w-col-6">
+          <h1 class="h1-on-light">Explore your dream patterns</h1>
+          <h3 class="heading-6 h3-on-light">Analyse your dreams based on information you provide by combining parameters like emotions, tags, lucidity and nightmare factors.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 5: Tags -->
+  <div class="wf-section">
+    <div class="w-container">
+      <div class="columns-2 w-row">
+        <div class="column w-col w-col-6">
+          <h1 class="h1-on-light sync-text-1">Discover what your dreams are made of</h1>
+          <h3 class="heading-6 h3-on-light">Mark your dreams with tags and find interesting insights about your dreams that are unique to you.</h3>
+        </div>
+        <div class="w-col w-col-6">
+          <img src="images/610a5dd18d041aedec5fd572_Tag in detail screen.png" loading="lazy" alt="" class="image-7"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature 6: Password (blue bg) -->
+  <div class="section-3 wf-section">
+    <div class="container-3 w-container">
+      <div class="columns-3 w-row">
+        <div class="w-col w-col-6">
+          <img src="images/610a5dd1b9e38a662792395f_Password screen.png" loading="lazy" alt="" class="image-6"/>
+        </div>
+        <div class="column-2 w-col w-col-6">
+          <h1 class="h1-on-light">Protect dreams with passcode</h1>
+          <h3 class="heading-6 h3-on-light">Extra layer of security for your dreams with passcode or fingerprint lock.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA / Bottom hero -->
+  <div class="section-4 wf-section">
+    <div class="container-2 w-container">
+      <img src="images/60e84df649da73c08076cda1_ic_launcher.svg" loading="lazy" width="180" alt="" class="image-4"/>
+      <h1 class="h1-bottom">Dream Catcher</h1>
+      <h3 class="h3-bottom">The Ultimate Dream Journal &amp; Lucidity Tool</h3>
+      <a href="https://apps.apple.com/se/app/dream-catcher-lucid-journal/id6444252682?l=en" class="link-block w-inline-block">
+        <img src="images/636e1eb4f2c48f759d61f199_Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" loading="lazy" width="200" alt="" class="image-5"/>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.vojtkovszky.dreamcatcher&hl=en&gl=US" class="link-block w-inline-block">
+        <img src="images/60e8461b71f40273fb101f52_google-play-badge.png" loading="lazy" width="230" alt="" class="image-5"/>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="section-5 wf-section">
+    <div class="w-container">
+      <h1 class="h6-footer">© 2026 Snaps Studio AB</h1>
+      <a href="mailto:hi@snaps.studio?subject=Email%20from%20Dream%20Catcher%20homepage!" class="link-block-2 w-inline-block">
+        <h1 class="h6-footer h6-f-email">hi@<strong>snaps.studio</strong></h1>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
